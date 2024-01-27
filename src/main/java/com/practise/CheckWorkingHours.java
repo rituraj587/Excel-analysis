@@ -65,7 +65,7 @@ public class CheckWorkingHours {
 
             // Check if the total hours worked on this day exceeds 14 hours
             if (employeeDailyHours.get(positionId).get(shiftDate) > 14) {
-                System.out.println("Employee with Position ID " + positionId + " has worked more than 14 hours on " + shiftDate);
+//              System.out.println("Employee with Position ID " + positionId + " has worked more than 14 hours on " + shiftDate);
                 return true;
             }
         }
