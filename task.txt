@@ -1,0 +1,61 @@
+Write a program that:
+1. Take the file as an input
+2. Programmatically analyze the file and print in console the name and position of employees 
+      a) who has worked for 7 consecutive days.
+      b) who have less than 10 hours of time between shifts but greater than 1 hour
+      c) Who has worked for more than 14 hours in a single shift
+3. Write a clean code with code comments and assumptions (if any) you are making
+
+
+
+
+
+
+Employees with Insufficient Rest: There are employees who have had less than 10 hours 
+of rest between their shifts but more than 1 hour. The 
+Position IDs of these employees are: WFS000550, WFS000345, WFS000318, 
+WFS000153, WFS000515, WFS000456, WFS000523, WFS000200, and WFS000536.
+
+
+Employees who have worked more than 14 hours in a single shift:
+
+An employee with Position ID WFS000523 has worked approximately 19.57 hours on 17-Sep-2023.
+An employee with Position ID WFS000577 has worked approximately 14.7 hours on 18-Sep-2023.
+
+
+
+
+
+-------------------
+
+public static void checkForLongShifts(List<Shift> shifts) {
+    
+        // This map will hold the total hours worked for each day for each employee
+        Map<String, Map<LocalDate, Double>> employeeDailyHours = new HashMap<>();
+
+        // Iterate over the shifts list once
+        for (Shift shift : shifts) {
+            if (shift == null || shift.getStartDateWithTime() == null || shift.getEndDateWithTime() == null) {
+                continue; // Skip if the shift or its time is null
+            }
+
+            String positionId = shift.getPositionId();
+            LocalDate shiftDate = shift.getStartDate();
+            LocalDateTime startDateTime = shift.getStartDateWithTime();
+            LocalDateTime endDateTime = shift.getEndDateWithTime();
+
+            // Calculate the duration of the current shift in hours
+            double hours = Duration.between(startDateTime, endDateTime).toHours();
+
+            // Update the daily hours map
+            employeeDailyHours.computeIfAbsent(positionId, k -> new HashMap<>());
+            employeeDailyHours.get(positionId).merge(shiftDate, hours, Double::sum);
+
+            // Check if the total hours worked on this day exceeds 14 hours
+            if (employeeDailyHours.get(positionId).get(shiftDate) > 14) {
+              //  System.out.println("Employee with Position ID " + positionId + " has worked more than 14 hours on " + shiftDate);
+            }
+        }
+    }
+
+
