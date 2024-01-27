@@ -1,0 +1,27 @@
+Employee with Position ID WFS000523 has worked more than 14 hours on 2023-09-17
+
+ 
+ These Employees who has worked for 7 consecutive days 
+
+ name id: WFS000456  Status: Active  name: CEreira Jr, JEse
+ name id: WFS000424  Status: Active  name: SiWgh, JaspreeM
+ name id: WFS000101  Status: Active  name: Sparks, KeWWeMh
+ name id: WFS000473  Status: Active  name: GAeWdia, JAaW CarXEs
+
+ 
+ These Employees have less than 10 hours of time between shifts but greater than 1 hour 
+
+ name id: WFS000536  Status: Active  name: HaCiXMEW, DeaWMe DevEW
+ name id: WFS000456  Status: Active  name: CEreira Jr, JEse
+ name id: WFS000345  Status: Active  name: MraW, WiXXiaC Ha
+ name id: WFS000318  Status: Active  name: De Xa Cerda, IgWaciE
+ name id: WFS000550  Status: Active  name: REdrigAez, GraWdEW AWgeX
+ name id: WFS000153  Status: Active  name: CaMaXaWE, CeghaW
+ name id: WFS000523  Status: Active  name: DeXgadiXXE REdarMe, ChrisMiaW S
+ name id: WFS000200  Status: Active  name: Xee, XaCar
+
+ 
+ These Employees have worked for 14 hours 
+
+ name id: WFS000523  Status: Active  name: DeXgadiXXE REdarMe, ChrisMiaW S
+PS D:\coding\VS code\excelmanagement> 
